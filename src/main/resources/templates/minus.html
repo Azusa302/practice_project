@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>引き算</title>
+</head>
+<body>
+	<h1>引き算</h1>
+    <form>
+        <input type="number" id="number1" oninput="changeColor()">
+        -
+        <input type="number" id="naumber2" oninput="changeColor()">
+        <button type="button" onclick="calculate()">＝</button>
+        <p id="result"></p>
+    </form>
+    <script>
+        function calculate() {
+            let num1 = document.getElementById("number1").value;
+            let num2 = document.getElementById("number2").value;
+
+            let result = num1 - num2;
+
+            document.getElementById("result").textContent = result;
+        }
+        function changeColor(input) {
+            input.style.backgroundColor = "lightblue";
+        }
+    </script>
+</body>
+</html>
